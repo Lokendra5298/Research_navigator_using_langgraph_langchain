@@ -40,19 +40,21 @@ Example query:
 ### 2. Installation
 
 ```bash
-# Clone or download the repository
-# cd into project folder
-
-# Create and activate virtual environment
+# 1. Clone / download project
+# 2. Create virtual environment
 python -m venv venv
-.\venv\Scripts\activate          # Windows
-# source venv/bin/activate       # Linux/macOS
+source venv/bin/activate           # Linux/macOS
+# venv\Scripts\activate            # Windows
 
-# Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# Set your Gemini API key (choose ONE method)
-$env:GOOGLE_API_KEY = "AIzaSyYourRealKeyHere"               # Windows PowerShell
-# or
-# export GOOGLE_API_KEY="AIzaSyYourRealKeyHere"             # Linux/macOS
-# or create .env file with: GOOGLE_API_KEY=AIzaSy...
+# 4. Set API key
+export GOOGLE_API_KEY="your-key-here"
+
+# 5. Download ArXiv metadata (~1.2 GB)
+# https://www.kaggle.com/datasets/Cornell-University/arxiv
+# → place arxiv-metadata-oai-snapshot.json in project root
+
+# 6. Run the app (first run builds DB + vector index — be patient)
+streamlit run streamlit_app.py
