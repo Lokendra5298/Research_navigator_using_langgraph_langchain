@@ -3,8 +3,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import os
 
-API_KEY = os.getenv("AIzaSyD1sySwIH2Kwc3tlLPEjoD2_M1BaVesOhk")
-# API_KEY = os.getenv("GOOGLE_API_KEY")
+API_KEY = os.getenv("GOOGLE_API_KEY")
 
 def get_gemini_model():
     if not API_KEY:
@@ -24,4 +23,5 @@ def get_embeddings():
     return HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2",
         encode_kwargs={"normalize_embeddings": True}
+
     )
