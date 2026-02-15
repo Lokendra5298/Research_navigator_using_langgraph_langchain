@@ -2,13 +2,6 @@
 
 **AI-powered academic paper discovery, filtering, semantic search and literature review generator**  
 using ArXiv metadata (~2M papers), LangChain/LangGraph agents, Google Gemini, and local embeddings.
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x400/2c3e50/ecf0f1?text=Scholarly+Research+Navigator" alt="Scholarly Research Navigator" />
-  <br/>
-  <em>(replace this placeholder with a real screenshot later)</em>
-</p>
-
 ## ✨ Features
 
 - Natural language queries about research papers
